@@ -1,7 +1,7 @@
 import { Chart } from './chart';
 import { useEffect, useState } from 'react';
 import { FillList, GroupBy, LoadingState } from './types';
-import { Divider, Group, Select, Stack, Table, Text, TextInput } from '@mantine/core';
+import { Divider, Group, Loader, Select, Stack, Table, Text, TextInput } from '@mantine/core';
 import { DatePicker, TimeInput } from '@mantine/dates';
 
 export const Content = () => {
@@ -106,7 +106,7 @@ export const Content = () => {
                             <Chart rawData={data.fills} groupBy={groupBy} />
                         )
                         : (
-                            <Text>Loading...</Text>
+                            <Loader/>
                         )
                     }
                 </div>

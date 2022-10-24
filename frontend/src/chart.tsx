@@ -43,11 +43,15 @@ const divisorByGroupBy: Record<GroupBy, number> = {
 
 export const Chart = ({ rawData, groupBy }: { rawData : Fill[], groupBy: GroupBy }) => {
     const { data, labels } = useMemo(() => {
+        // Group and aggregate fills into PnL
         const bucketedData = rawData.reduce(
             (acc, fill) => {
+                // Determine grouping bucket, based on nearest timestamp by granularity
                 const date = new Date(fill.timestamp)
                 const divisor = divisorByGroupBy[groupBy]
                 const key = new Date((Math.floor(date.getTime() / divisor) * divisor)).toISOString()
+
+                // Aggregate data for timestamp
                 acc[key] = (acc[key] || 0) + (fill.side === 'BUY' ? fill.fill_price : -fill.fill_price) - fill.fees
                 return acc
             },
