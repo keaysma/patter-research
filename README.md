@@ -1,5 +1,11 @@
 # interview-public
-public information for interviews @ PatternResearch
+PnL Demo
+
+
+
+https://user-images.githubusercontent.com/25709557/197446138-9a1c5358-c238-42d0-a7df-ba6c8a230d00.mov
+
+
 
 # Backend
 Written in FastAPI, using SQLAlchemy over SQLite as a DB, Pydantic for model formatting
