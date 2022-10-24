@@ -64,3 +64,5 @@ Simple as
 ```bash
 npm start
 ```
+
+Connect using http://pattern.test
