@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Tuple, Any
 from pydantic import BaseModel
 from datetime import datetime
 
@@ -18,3 +18,6 @@ class Fill(BaseModel):
 class FillList(BaseModel):
     fills: List[Fill]
     count: int
+
+class FillData(BaseModel):
+    groups: List[Tuple[float, float, str]]
