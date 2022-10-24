@@ -1,6 +1,9 @@
+# React
 **/node_modules
+yarn.lock
+
+# Python
 bin/
 lib/
 pyvenv.cfg
-
 **/__pycache__
