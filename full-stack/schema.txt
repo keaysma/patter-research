@@ -1,0 +1,10 @@
+CREATE TABLE fills(
+    order_id INT NOT NULL,
+    fill_price DOUBLE NOT NULL,
+    fill_quantity DOUBLE NOT NULL,
+    side TEXT CHECK (side IN ('BUY', 'SELL')) NOT NULL,
+    exchange TEXT NOT NULL
+    symbol TEXT NOT NULL,
+    fees DOUBLE NOT NULL,
+    timestamp DATETIME PRIMARY KEY
+);
