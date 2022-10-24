@@ -1,5 +1,4 @@
-# interview-public
-PnL Demo
+# PnL Demo
 
 
 
